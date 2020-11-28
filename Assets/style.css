@@ -6,11 +6,6 @@
     
 }
 
-.collapse.navbar-collapse ul {
-    padding-left: 900px;
-
-    
-}
 
 .intro_1 {
     padding-top: 30px;
@@ -73,10 +68,10 @@
     font-family: 'Times New Roman', Times, serif;
 }
 
-.col-lg-12 {
+/* .col-lg-12 {
     border: solid;
     border-color: grey;
-    padding: 15px;
+    padding: 15px; */
 }
 .col-lg-12 h1 {
     font-family: 'Times New Roman', Times, serif;
