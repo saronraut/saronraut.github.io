@@ -94,7 +94,7 @@
 
 /* Custom Table */
 
-table {
+/* /* table { */
     border: 1px solid black;
 }
 tr:nth-child(even) {
@@ -112,5 +112,4 @@ th {
     text-align: center;
 
 }
-
 
