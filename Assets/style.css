@@ -114,7 +114,7 @@ th {
 }
 
 
-@media (max-width : 500px){
+@media (max-width : 500px ){
 .container-sum article h1{
     background-color: salmon;
     color: white;    
@@ -132,8 +132,7 @@ th {
     margin-right: 50%;
     width: 40px;
 }
-.container.row.col-lg-12 article p {
-    align: center;
+
 }
 
 @media (min-width : 500px){
