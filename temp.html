@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latitude_v_Temp</title>
+    <link rel="stylesheet" href="Assets/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="landing_page.html">Latitude</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Plots
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <a class="dropdown-item" href="cloudiness.html">Cloudiness</a>
+                <a class="dropdown-item" href="humidity.html">Humidity</a>
+                <a class="dropdown-item" href="temp.html">Max Temperatures</a>
+                <a class="dropdown-item" href="windspeed.html">Wind-Speed</a>
+              </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="comparison.html">Comparison</a>
+              </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Data.html">Data</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+</head>
+
+<body>
+    <div class="container">
+        <section class="row">
+            <div class="col-lg-12">   
+                <article class="comp_temp">
+                    <h1 class="headline"> Comparison: Latitude Vs. Max Temperatures</h2> 
+                    <hr />
+                    <img id="temp_img" src="Assets/Images/Fig1.png" alt="Temp_vs_Lat" Align = "Left">
+                    <p class="intro_1"> Utlizing the Data collected from multiple cities. We wanted to see how the Max-Temperature would
+                        vary based on the Latitdue position of the city. The Range of latitude for over 500 cities are in -60 to 80.
+                    </p> 
+                    <p class="intro_2"> After using our expert analytical skills and mastery of MatPlotlib, we were able to generate a plot
+                        for all cities in our data. In the plot, we can notice there is a trend of rising Max Temperature as closer we get to
+                        the equator. Another thing deduce is that peak point for Max Temperature is not at zero (equator) but is actually in the
+                        range of (10-20) latitude postioning. This could be due to other factors that could contribute to higher Temperature
+                        other than the geolocation. Which could've been further investigated.  
+                    </p>
+                </article>
+            </div>
+        </section>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+</body>
+</html>

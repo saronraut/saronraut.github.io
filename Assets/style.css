@@ -1,0 +1,164 @@
+.navbar-brand {
+    background: salmon;
+    padding: 20px;
+    border-radius: 5px;
+    font-weight: bolder;
+    
+}
+
+
+.intro_1 {
+    padding-top: 30px;
+    padding-bottom: 25px;
+}
+
+
+.container-sum {
+    padding-left: 20px;
+}
+
+.img a img {
+    height: 150px;
+    width: 200px;
+}
+
+
+.container-sum article {   
+    padding-top: 50px;
+    outline-color: lightgray;
+    outline-style: solid;
+    padding-right: 25px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    
+  
+}
+
+.container-img {
+    border-style:solid;
+    border-color: lightgray;
+    padding-top: 15px;
+    padding-left: 10px;
+    padding-bottom: 15px;
+    padding-right:0px;
+}
+
+.navbar.navbar-expand-lg.navbar-light.bg-light{
+    padding-bottom: 20px;
+}
+
+.navbar.navbar-expand-lg.navbar-light.bg-light a {
+    color:black;
+    
+}
+
+.front_content h1 {
+    color:black;
+    font-family: 'Times New Roman';
+}
+
+.headline-box {
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    padding-top: 15px;
+}
+
+.container-img h3 {
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* .col-lg-12 {
+    border: solid;
+    border-color: grey;
+    padding: 15px; */
+}
+.col-lg-12 h1 {
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+.col-lg-12 h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+.titleline h1 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: Center;
+}
+
+.container section {
+    padding-left: 150px;
+}
+
+
+
+/* Custom Table */
+
+/* /* table { */
+    border: 1px solid black;
+}
+tr:nth-child(even) {
+    background-color: lightblue;
+}
+
+th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px white;
+}
+
+th {
+    background-color: salmon;
+    text-align: center;
+
+}
+
+
+@media (max-width : 300px ){
+.container-sum article h1{
+    background-color: salmon;
+    color: white;    
+}
+.container-img h3 {
+    background-color: salmon;
+    color: white;
+}
+.titleline h1 {
+    background-color: salmon;
+    color: white;
+}
+.row{
+    margin-left: 0;
+    margin-right: 50%;
+    width: 40px;
+    
+}
+
+.container {
+    align-content: center;
+}
+
+
+}
+
+/* @media (min-width : 500px){
+    .container-sum article h1{
+        background-color: salmon;
+        color: white;    
+    }
+    .container-img h3 {
+        background-color: salmon;
+        color: white;
+    }
+    .titleline h1 {
+        background-color: salmon;
+        color: white;
+    }
+    .row{
+        margin-left: 0;
+        margin-right: 50%;
+        width: 40px;
+    }
+    .container.row.col-lg-12 article p {
+        align: center;
+    } */
