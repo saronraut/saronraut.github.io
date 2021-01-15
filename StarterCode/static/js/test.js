@@ -1,12 +1,17 @@
+// CREATED CAUSE DUE TO GRAPH NOT CHANGING WHEN USER ID WAS CHANGED 
+// ----------------- TEST GROUD-------------------------------------
+
 // First Task: Use d3 to read json and create a horizontal bar chart with top ten OTU
 
 // realzied I need to make it into a function so it can be called during changed event
 function getPlots (id){
     d3.json("samples.json").then((data) => {
-        console.log(data);
+        // console.log(data);
         // trying to plot the otu from first sample
+        // let sample_ids = data.samples[0].otu_ids;
         let sample_ids = data.samples.filter(item => item.id.toString() === id)[0];
-        // console.log(sample_ids);  
+        // console.log(sample_ids)
+
 
         // getting the list of the first 10
         let top10_ids = sample_ids.otu_ids.slice(0,10);
@@ -48,13 +53,22 @@ function getPlots (id){
 
 
         // Second TASK: Creating a bubble chart that display each samples
-        
-        // create an array(list) 
+        // x is otu_id and y is sample_values
+        // sample_id contains all the OTU in first sample
+
+        // create an array(list) of samples_value 
+        // let Otu_values = data.samples[0].sample_values;
+        // console.log(Otu_values);
+        // var samples = data.samples;
+        // var resultArray = samples.filter(item => item.id.toString() === id);
+        // var result = resultArray[0];
+
         var otu_ids = data.samples.filter(item => item.id.toString() === id)[0].otu_ids;
         var otu_labels = data.samples.filter(item => item.id.toString() === id)[0].otu_labels;
         var sample_values = data.samples.filter(item => item.id.toString() === id)[0].sample_values;
 
-        //  created a Trace for Bubble plot
+
+            //  created a Trace for Bubble plot
         let tracebubble = {
             x: otu_ids,
             y: sample_values,
@@ -63,6 +77,7 @@ function getPlots (id){
                 size: sample_values,
                 color: otu_ids
             },
+            // didn't have variables saved but labels was retreieved
             text : otu_labels
             };
         // assign layout for clear context layout name was changed. 
@@ -71,7 +86,6 @@ function getPlots (id){
             width : 1000,
             xaxis : {title:"OTU ID"}
             };
-
         // creating an array for plot
         let bubbledata = [tracebubble];
         
@@ -88,7 +102,7 @@ function getdeminfo(id){
     d3.json("samples.json").then ((data)=> {
     // get only the metadata info
         let meta_data = data.metadata;
-        console.log(meta_data);
+        // console.log(meta_data);
         
         // filter meta_data for info by id
         let result = meta_data.filter(item => item.id.toString() === id)[0];
@@ -100,15 +114,16 @@ function getdeminfo(id){
         demographInfo.html("");
 
         // extract the necessary demogrphic data based on id and append info to the panel
-        Object.entries(result).forEach((key)=> {
-            demographInfo.append("h5").text(key[0] + ": " + key[1] + "\n");
+        Object.entries(result).forEach(([key, value])=> {
+            demographInfo.append("h5").text(`${key.toUpperCase()} : ${value}`);
         }); 
     });
  };
 // function for change event
 function optionChanged (id) {
     getPlots(id);
-    getdeminfo (id);   
+    getdeminfo (id);
+    
 }
 
 
@@ -122,7 +137,7 @@ function init() {
         console.log(data)
 
  // get the id data to the dropdwown menu
-        data.names.forEach(function(name) {
+       let id =  data.names.forEach(function(name) {
             dropdown.append("option").text(name).property("value");
         });
 
